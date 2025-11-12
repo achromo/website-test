@@ -1,0 +1,305 @@
+/*main base*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+/*header and navigation*/
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-bar {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.nav-bar:hover {
+    border-color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+/*drop down button*/
+.drop {
+    display: none;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*content section*/
+.supression {
+  background-color: #ffe8d6;
+  padding: 40px 20px;
+}
+
+.supression h1 {
+  color: #b33a3a;
+}
+
+.supression h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.supression ul {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.supression p {
+  margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: justify;
+}
+
+.text-content h1 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.text-content p, li {
+    font-size: 1rem;
+    color: #333;
+}
+
+.pic {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pic img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.what-to-prepare {
+  background-color: #fff8e6;
+  padding: 40px 20px;
+}
+
+.what-to-prepare h1 {
+  color: #c45a00;
+}
+
+.what-to-prepare h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.what-to-prepare ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.what-to-prepare li {
+  margin-bottom: 8px;
+}
+
+.what-to-prepare p {
+  margin-bottom: 15px;
+}
+
+.what-to-prepare img {
+  border-radius: 8px;
+  max-width: 30%;
+  height: auto;
+}
+
+.how-to-survive {
+  background-color: #ffe0e0;
+  padding: 40px 20px;
+}
+
+.how-to-survive h1 {
+  color: #a11a1a;
+}
+
+.how-to-survive h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.how-to-survive ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.how-to-survive li {
+  margin-bottom: 8px;
+}
+
+.how-to-survive p {
+  margin-bottom: 15px;
+}
+
+.how-to-survive img {
+  border-radius: 8px;
+  max-width: 30%;
+  height: auto;
+}
+
+.review {
+  background-color: #e6f7ff;
+  padding: 40px 20px;
+}
+
+.review h1 {
+  color: #006699;
+}
+
+.review h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.review ul, .review ol {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.review li {
+  margin-bottom: 8px;
+}
+
+.review p {
+  margin-bottom: 15px;
+}
+
+.review img {
+  border-radius: 8px;
+  max-width: 50%;
+  height: auto;
+}
+
+
+/*footer*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+}
+
+footer img {
+    max-width: 120px;
+}
+
+/*responsive design*/
+
+/* Tablets */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        max-width: 90%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .drop {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: #333;
+        width: 100%;
+    }
+
+    .nav.show .nav-links {
+        display: flex;
+    }
+
+    .nav-bar {
+        padding: 12px;
+        border-bottom: 1px solid #555;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+/*small phones*/
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 1.4em;
+    }
+
+    .text-content p {
+        font-size: 0.9em;
+    }
+
+    .pic img {
+        max-width: 100%;
+    }
+}
